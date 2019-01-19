@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_product"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toRightOf="@id/checkbox"
+
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="暗室逢灯发发的说法as阿萨达是否"
+        android:lines="2"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toRightOf="@id/iv_product"
+        app:layout_constraintRight_toLeftOf="@id/addminus"
+        />
+   <TextView
+       android:id="@+id/tv_price"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:text="￥：123"
+       android:textColor="#f00"
+       app:layout_constraintTop_toBottomOf="@id/tv_title"
+       app:layout_constraintLeft_toRightOf="@id/iv_product"
+       />
+    <com.bawei.gsc.gouwuche.widget.AddMinus
+        android:id="@+id/addminus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>
